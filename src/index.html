@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> evelyn </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="evelyn's personal website.">
+    <link rel="icon" type="image/png" href="flower.png">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+      html, body {
+        height: 100%;
+        margin: 0;
+      }
+      body, main {
+        background-color: #0E0E0E;
+        color: #FEFEFF;
+        font-family: "Google Sans Code", monospace;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      h1 {
+        font-size: 1.7em;
+        margin: 0.1em 0;
+      }
+      h2 {
+        font-size: 1.2em;
+        font-weight: normal;
+        font-style: italic;
+        margin: 0.05em 0 0.2em 0;
+      }
+      p {
+        font-size: 1em;
+        margin: 0.3em 0;
+      }
+      a:link{color:inherit;text-decoration:none}
+      a:visited{color:inherit;text-decoration:none}
+      a:active{color:inherit;text-decoration:underline}
+      a:hover{color:inherit;text-decoration:underline}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1> evelyn karaaslan </h1>
+      <h2> rochester, ny </h2>
+      <p> urochester, cs + math/stats </p>
+      <p style="font-size: 0.95em" > 
+        <a href="https://DrainerEvelyn.github.io/resume.pdf">/resume/</a>&nbsp
+        <a href="https://www.linkedin.com/in/mertkan-karaaslan-950573298/">/linkedin/</a>&nbsp
+        <a href="https://www.github.com/DrainerEvelyn">/github/</a>&nbsp
+        <a href="#" id="email" data-clipboard-text="mkaraasl@u.rochester.edu">/email/</a>
+      </p>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
+    <script>
+      const email = document.getElementById('email');
+      const clipboard = new ClipboardJS('#email');
+      const tip = tippy(email, {
+        content: 'Copied!',
+        trigger: 'manual',
+        placement: 'top',
+        theme: 'light-border',
+      });
+      clipboard.on('success', () => {
+        tip.show();
+        setTimeout(() => tip.hide(), 1000);
+      });
+    </script>
+  </body>
+</html>
